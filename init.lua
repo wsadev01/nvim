@@ -1,5 +1,5 @@
-require("commands")
 require("general")
+require('ui')
+require("commands")
 require("plugins")
 --require("snippets")
-require("ui")

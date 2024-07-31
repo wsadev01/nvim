@@ -24,6 +24,7 @@ end
 -- Install plugins
 lazy.setup({
 	spec = {
+		require("plugins.alpha"),
 		require("plugins.ansi"),
 		require("plugins.chadtree"),
 		require("plugins.cmp"),
@@ -48,10 +49,10 @@ lazy.setup({
 		require("plugins.tmux"),
 		require("plugins.theme"),
 		require("plugins.tint"),
+		require("plugins.toggleterm"),
 		require("plugins.treesitter"),
 		require("plugins.trouble"),
 		require("plugins.surround"),
-		require("plugins.which-key"),
 	},
 	dev = {
 		path = "~/.local/src",
@@ -82,6 +83,6 @@ lazy.setup({
 	},
 })
 
-require("toggleterm").setup{size=20, direction=vertical,on_open=function()vim.cmd("startinsert")end}
+require("toggleterm").setup{size=15, direction=vertical,on_open=function()vim.cmd("startinsert")end}
 require("remember").setup{}
 

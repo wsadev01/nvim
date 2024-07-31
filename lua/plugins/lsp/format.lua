@@ -14,7 +14,7 @@ local int_fmt = function() vim.lsp.buf.formatting {} end
 
 local cmds = {
 	-- c = ext_fmt "clang-format --style=file -i",
-	-. cmake = ext_fmt "cmake-format -i",
+	-- cmake = ext_fmt "cmake-format -i",
 	-- cpp = ext_fmt "clang-format --style=file -i",
 	css = ext_fmt "prettier -w",
 	html = ext_fmt "prettierd -w",

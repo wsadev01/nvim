@@ -44,21 +44,25 @@ f.cmd("Tail", 'set autoread | au CursorHold * checktime | call feedkeys("G")', {
 f.cmd("Chmodx", "!chmod a+x %", { desc = "make current buffer executable" })
 r.noremap("n", "<leader>x", ":Chmodx<cr>", "chmod +x buffer")
 
--- fix syntax highlighting
+-- fix syntax highlight
 f.cmd("FixSyntax", "syntax sync fromstart", { desc = "reload syntax highlighting" })
 
 -- ToggleTerm commands
-r.noremap('n', '<leader>Tp', ':TermExec direction=vertical dir=% cmd="source %:p:h/venv/bin/activate && clear" size=80 name=py<CR>', "Open (py) terminal and source venv")
-r.noremap('n', '<leader>1', ':lua require("utils.functions").toggle_term_with_count(1)<CR>', "Open terminal 1")
-r.noremap('n', '<leader>2', ':lua require("utils.functions").toggle_term_with_count(2)<CR>', "Open terminal 2")
-r.noremap('n', '<leader>3', ':lua require("utils.functions").toggle_term_with_count(3)<CR>', "Open terminal 3")
+--
+vim.api.nvim_set_keymap('n', '<leader>1', [[ToggleTerm 1]], { noremap = true, silent = true })
+r.noremap('n', '<leader>Tp', ':TermExec direction=vertical dir=% cmd="source %:p:h/venv/bin/activate && clear" size=20 name=py<CR>', "Open (py) terminal and source venv")
+r.noremap('n', '<leader>1', ':1ToggleTerm Size=15 <CR>', "Open terminal 1")
+r.noremap('n', '<leader>2', ':2ToggleTerm Size=15 <CR>', "Open terminal 2")
+r.noremap('n', '<leader>3', ':3ToggleTerm Size=15 <CR>', "Open terminal 3")
+
 local tt_opts = {buffer = 0}
+
 r.noremap('t', '<C-h>', "<Cmd>wincmd h<CR>", "", tt_opts)
 r.noremap('t', '<C-j>', "<Cmd>wincmd j<CR>", "", tt_opts)
 r.noremap('t', '<C-k>', "<Cmd>wincmd k<CR>", "", tt_opts)
 r.noremap('t', '<C-l>', "<Cmd>wincmd l<CR>", "", tt_opts)
+
 vim.api.nvim_set_keymap('t', '<Esc>', [[<C-\><C-n>]], { noremap = true, silent = true })
--- The shite won't work idk why >:/
 -- r.noremap('t', '<Esc>', [[<C-\><C-n>]], "", tt_opts)
 
 -- the worst place in the universe

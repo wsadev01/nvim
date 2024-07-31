@@ -1,3 +1,4 @@
+
 return {
 	diagnostics = {
 		error = " ",
@@ -67,3 +68,5 @@ return {
 		preview = { "┄", "┊", "┄", "┊", "┄", "╮", "╯", "╰", },
 	},
 }
+
+
