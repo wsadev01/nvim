@@ -417,9 +417,9 @@ const {}Schema = new mongoose.Schema(
   {{
   /* Your data */
     deleted: {{ type: Boolean, default: false }},
-  }}
+  }},
   {{
-    collection: "{}s",
+    timestamps: true,
   }}
 )
 
@@ -427,7 +427,7 @@ module.exports = mongoose.model('{}', {}Schema);
   ]],
   {
     i(1, "model-name"),
-    r(1), r(1), r(1)
+    r(1), r(1),
   })
   ),
 s("jsx-compo-base", fmt(
