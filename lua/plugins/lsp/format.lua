@@ -29,6 +29,7 @@ local cmds = {
 	-- rust = int_fmt,
 	sh = ext_fmt "shfmt -w -i 0 -sr -kp",
 	typescript = ext_fmt "prettier -w",
+	typescriptreact = ext_fmt "prettier -w",
 	yaml = ext_fmt "prettier -w",
 }
 

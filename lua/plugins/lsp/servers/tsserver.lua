@@ -6,13 +6,12 @@ return function(on_attach)
 			client.server_capabilities.document_formatting = true
 		end,
 		cmd = { "typescript-language-server", "--stdio" },
+
 		filetypes = {
-			"javascript",
-			"javascriptreact",
-			"javascript.jsx",
 			"typescript",
 			"typescriptreact",
-			"typescript.tsx",
+			"javascript",
+			"javascriptreact",
 		},
 		init_options = {
 			hostInfo = "neovim",

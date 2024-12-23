@@ -37,6 +37,7 @@ end
 
 local snippets = {
 	javascript = require('snippets.javascript'),
+	typescriptreact = require('snippets.tsx'),
 	javascriptreact = require('snippets.react'),
 }
 
